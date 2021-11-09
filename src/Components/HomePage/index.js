@@ -26,7 +26,7 @@ const HomePage = () => {
             </HomeBackground>
             <LeftSide>
                 <Text>Read as a man goes insane trying to create a decent looking blog</Text>
-                <LinkContainer>Testing redeploy </LinkContainer>
+                <LinkContainer>Testing redeploy attempt #2 </LinkContainer>
             </LeftSide>
             <RightSide>
                 <LogoFirstHalf>D.C</LogoFirstHalf>
