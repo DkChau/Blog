@@ -20,11 +20,6 @@ export const HomeContainer = styled.div`
 export const HomeBackground = styled.svg`
     width:100%;
     height:100%;
-    position:absolute;
-    background-color:#8ea99b;
-    top:0;
-    left:0;    
-    z-index:-1;
 `
 export const HomeTab = styled.path`
   fill:#697d73;
@@ -45,12 +40,6 @@ export const Text = styled.span`
     font-size:2.8rem;
     max-width:700px;
     text-align:center;
-`
-export const LinkContainer = styled.div`
-    margin-top: 40px;
-    width:80%;
-    height:100px;
-    border:1px solid black;
 `
 export const RightSide = styled.div`
     position:absolute;
@@ -85,4 +74,35 @@ export const ArrowText = styled.span`
     display:inline-block;
     font-size:1rem;
     writing-mode:vertical-lr;
+`
+export const LinkContainer = styled.div`
+    margin-top: 40px;
+    width:80%;
+    height:50px;
+    /* border:1px solid black; */
+    display:flex;
+    align-items: center;
+`
+export const LinkWrapper = styled.div`
+    display:grid;
+    width:40%;
+    margin:0 auto;
+    grid-template-columns: auto 1fr 1fr 1fr;
+    grid-gap: 10px;
+`
+export const Logo = styled.div`
+    font-size:1.5rem;
+    align-self:center;
+`
+export const GHLink = styled.div`
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    font-size:1.2rem;
+    padding:0 10px;
+
+    &:hover{
+        color:white;
+        background:black;
+    }
 `

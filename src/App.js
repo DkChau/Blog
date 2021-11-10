@@ -1,12 +1,13 @@
 import './App.css';
 import {HashRouter as Router, Routes, Route} from 'react-router-dom';
-import HomePage from './Components/HomePage';
+import Home from './Pages/Home';
+
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route exact path='/' element={<HomePage/>}/>
+        <Route exact path='/' element={<Home/>}/>
       </Routes>
     </Router>
   );

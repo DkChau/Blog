@@ -10,9 +10,13 @@ import {
     LogoSecondHalf,
     ArrowContainer,
     ArrowText,
-    LinkContainer
+    LinkContainer,
+    Logo,
+    LinkWrapper,
+    GHLink,
 } from './HomePageElements'
 import {CgArrowLongDown} from 'react-icons/cg'
+import { BsGithub } from 'react-icons/bs'
 
 const HomePage = () => {
     return (
@@ -26,7 +30,14 @@ const HomePage = () => {
             </HomeBackground>
             <LeftSide>
                 <Text>Read as a man goes insane trying to create a decent looking blog</Text>
-                <LinkContainer>Testing redeploy attempt #2 </LinkContainer>
+                <LinkContainer>
+                    <LinkWrapper> 
+                        <Logo><BsGithub/></Logo>
+                        <GHLink>API</GHLink>
+                        <GHLink>Controller</GHLink>
+                        <GHLink>Blog</GHLink>
+                    </LinkWrapper>
+                </LinkContainer>
             </LeftSide>
             <RightSide>
                 <LogoFirstHalf>D.C</LogoFirstHalf>
