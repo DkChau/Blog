@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import {Link} from 'react-router-dom';
 
 export const ListContainer = styled.div`
     background:transparent;
@@ -23,15 +24,16 @@ export const ListWrapper = styled.div`
     justify-content: center; //Up Down
     align-items:center;
 `
-export const ListItem = styled.div`
+export const ListItem = styled(Link)`
     display:grid;
     margin:15px 0;
     grid-template-columns: 66.7% 33.3%;
     grid-template-rows: 125px;
     width:60%;
+    text-decoration:none;
     box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 3px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
 `
-export const ListTitle = styled.div`
+export const ListTitle = styled.span`
     color:white;
     background:#697d73;
     display:flex;
@@ -41,7 +43,7 @@ export const ListTitle = styled.div`
     border-right:1px solid rgba(6, 24, 44, 0.4);
     font-weight:600;
 `
-export const ListDate = styled.div`
+export const ListDate = styled.span`
     color:black;
     background:#8ea99b;
     display:flex;

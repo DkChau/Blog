@@ -100,6 +100,7 @@ export const GHLink = styled.div`
     align-items:center;
     font-size:1.2rem;
     padding:0 10px;
+    transition:all 0.2s ease-in-out;
 
     &:hover{
         color:white;

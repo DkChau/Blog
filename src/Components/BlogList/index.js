@@ -9,7 +9,7 @@ import {
     ListDate
 } from './BlogListElements'
 
-const BlogPost = () => {
+const BlogList = () => {
     const [posts,setPosts] = useState([])
     const [Loading, setLoading] = useState(false);
 
@@ -43,7 +43,7 @@ const BlogPost = () => {
             <ListWrapper>
                 {posts.map(post=>{
                     return(
-                        <ListItem>
+                        <ListItem to={`/post/${post._id}`}>
                             <ListTitle>{post.title}</ListTitle>
                             <ListDate>Posted: {post.date_formatted}</ListDate>
                         </ListItem>
@@ -55,4 +55,4 @@ const BlogPost = () => {
     )
 }
 
-export default BlogPost
+export default BlogList
