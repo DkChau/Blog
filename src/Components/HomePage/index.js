@@ -33,9 +33,9 @@ const HomePage = () => {
                 <LinkContainer>
                     <LinkWrapper> 
                         <Logo><BsGithub/></Logo>
-                        <GHLink>API</GHLink>
-                        <GHLink>Controller</GHLink>
-                        <GHLink>Blog</GHLink>
+                        <GHLink href='https://github.com/novaark/BlogApi' target="_blank" rel="noreferrer noopener">API</GHLink>
+                        <GHLink href='https://github.com/novaark/BlogController' target="_blank" rel="noreferrer noopener">Controller</GHLink>
+                        <GHLink href='https://github.com/novaark/Blog' target="_blank" rel="noreferrer noopener">Blog</GHLink>
                     </LinkWrapper>
                 </LinkContainer>
             </LeftSide>

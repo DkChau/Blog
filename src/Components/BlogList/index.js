@@ -6,7 +6,13 @@ import {
     ListItem,
     ListWrapper,
     ListTitle,
-    ListDate
+    ListDate,
+    ListText,
+    ListTextWrapper,
+    ListAuthor,
+    ListInfoWrapper,
+    ListHeader,
+    ViewAll
 } from './BlogListElements'
 
 const BlogList = () => {
@@ -37,19 +43,36 @@ const BlogList = () => {
                 <BlogRect
                     viewBox="0 0 100 100"
                     x='60%'
+                    y='0%'
+                    height='100%'
                 >
                 </BlogRect>
             </BlogSVG>
             <ListWrapper>
-                {posts.map(post=>{
-                    return(
-                        <ListItem to={`/post/${post._id}`}>
-                            <ListTitle>{post.title}</ListTitle>
-                            <ListDate>Posted: {post.date_formatted}</ListDate>
-                        </ListItem>
-                    )
-                })}
+                <ListHeader>
+                    RECENT POSTS
+                </ListHeader>
+                {posts.map((post,index)=>{
+                    if(index>3){
+                        return
+                    }
+                    else{
+                        return(
+                            <ListItem to={`/post/${post._id}`}>
+                                <ListTextWrapper>
+                                    <ListTitle>{post.title}</ListTitle>
+                                    <ListText>{post.text}</ListText>
+                                </ListTextWrapper>
+                                <ListInfoWrapper>
+                                    <ListDate>Posted: {post.date_formatted}</ListDate>
+                                    <ListAuthor>By: D. Chau</ListAuthor>
+                                </ListInfoWrapper>
+                            </ListItem>
+                        )
+                    }
 
+                })}
+                <ViewAll to='/post'>Test post</ViewAll>
             </ListWrapper>
         </ListContainer>
     )

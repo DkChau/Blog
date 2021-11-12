@@ -32,6 +32,7 @@ export const BlogText = styled.div`
     font-size:1.3rem;
     font-family:'open sans';
     padding-top:40px;
+    font-weight:400;
 `
 export const BlogDate = styled.div`
     font-size:1.1rem;

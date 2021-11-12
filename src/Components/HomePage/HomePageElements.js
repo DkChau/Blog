@@ -40,6 +40,7 @@ export const Text = styled.span`
     font-size:2.8rem;
     max-width:700px;
     text-align:center;
+    
 `
 export const RightSide = styled.div`
     position:absolute;
@@ -59,7 +60,7 @@ export const LogoFirstHalf = styled.span`
 export const LogoSecondHalf = styled.span`
     font-size:9rem;
     font-weight:700;
-    color:white;
+    color: 	#F5F5F5;
     margin-left: 4rem;
 `
 export const ArrowContainer = styled.div`
@@ -94,13 +95,15 @@ export const Logo = styled.div`
     font-size:1.5rem;
     align-self:center;
 `
-export const GHLink = styled.div`
+export const GHLink = styled.a`
     display:flex;
     justify-content: center;
     align-items:center;
     font-size:1.2rem;
     padding:0 10px;
     transition:all 0.2s ease-in-out;
+    text-decoration:none;
+    color:black;
 
     &:hover{
         color:white;
