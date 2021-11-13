@@ -9,6 +9,7 @@ import {
     BlogForm,
     BlogInput,
     BlogLabel,
+    CommentContainer
 } from './CommentSectionElements'
 
 const CommentSection = (props) => {
@@ -45,9 +46,9 @@ const CommentSection = (props) => {
 
     return (
         <BlogContainer className='viewBlogFormContainer'>
-            <BlogTitle className='commentTag'>Create Comment</BlogTitle>
-            <BlogForm className='createComment'>
 
+            <BlogForm className='createComment'>
+                <BlogTitle className='commentTag'>Create Comment</BlogTitle>
                 <BlogLabel htmlFor='name'>Name</BlogLabel>
                 <BlogInput ref={nameRef} id='name' name='name'></BlogInput>
 
@@ -56,11 +57,14 @@ const CommentSection = (props) => {
 
                 <BlogBtn onClick={submitComment}>Submit Comment</BlogBtn>
             </BlogForm>
-            {props.comments.map((comment,index)=>{
-                return (
-                    <Comment index={index} comment={comment}/>
-                )
-            })}
+            <CommentContainer>
+                {props.comments.map((comment,index)=>{
+                    return (
+                        <Comment index={index} comment={comment}/>
+                    )
+                })}
+            </CommentContainer>
+
         </BlogContainer>
     )
 }

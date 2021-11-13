@@ -53,7 +53,7 @@ const BlogList = () => {
                     RECENT POSTS
                 </ListHeader>
                 {posts.map((post,index)=>{
-                    if(index>3){
+                    if(index>4){
                         return
                     }
                     else{

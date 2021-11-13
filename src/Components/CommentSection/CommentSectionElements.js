@@ -1,13 +1,14 @@
 import styled from 'styled-components'
 
 export const BlogContainer = styled.div`
-    width:100%;
+    width:80%;
     height:auto;
     display: flex;
     justify-content: center;
     align-items:center;
     flex-direction: column;
-    margin-top:50px;
+    margin:0 auto;
+    margin-top:60px;
 `
 export const BlogTitle = styled.div`
     font-size:2rem;
@@ -18,11 +19,14 @@ export const BlogForm = styled.form`
     display:flex;
     flex-direction: column;
     justify-content: center;
-    width:700px;
+    width:90%;
+    max-width:700px;
     align-items: center;
     background:#8ea99b;
-    border:1px solid black;
-    padding:10px 0;
+    /* border:1px solid black; */
+    padding:10px 0 30px 0;
+    margin-bottom:100px;
+    box-shadow: rgba(60, 64, 67, 0.55) 0px 1px 2px 0px, rgba(60, 64, 67, 0.55) 0px 1px 3px 1px;
 `
 export const BlogLabel = styled.label`
     width:90%;
@@ -44,4 +48,10 @@ export const BlogBtn = styled.button`
     height:30px;
     margin-top: 10px;
     border:1px solid black;
+`
+export const CommentContainer = styled.div` 
+    width:100%;
+    &:last-child{
+        margin-bottom: 50px;
+    }
 `

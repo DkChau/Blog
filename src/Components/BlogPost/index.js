@@ -9,8 +9,12 @@ import {
     BlogText,
     BlogTitle,
     BlogAuthor,
+    SingleLink,
+    LinkContainer,
+    IconWrapper,
 
 } from './BlogPostElements';
+import {HiOutlineArrowNarrowLeft, HiOutlineArrowNarrowRight} from 'react-icons/hi'
 
 const BlogPost = (props) => {
 
@@ -49,15 +53,28 @@ const BlogPost = (props) => {
 
     return (
         <BlogContainer>
+            <LinkContainer to='/'> 
+                <IconWrapper>
+                    <HiOutlineArrowNarrowLeft/>
+                </IconWrapper>
+                <SingleLink>Home</SingleLink>
+            </LinkContainer>
             <BlogContentWrapper>
                 <BlogContent>
                     <BlogTitle>{post.title}</BlogTitle>       
                     <BlogAuthor>By: D. Chau</BlogAuthor>
                     <BlogDate>Created: {post.date_formatted}</BlogDate>
-                    <BlogText>{post.text}</BlogText>
+                    
                 </BlogContent>
+                <BlogText>{post.text}</BlogText>
+                <CommentSection comments={comments}/>
             </BlogContentWrapper>
-            <CommentSection comments={comments}/>
+            <LinkContainer to='/post'> 
+                <SingleLink>All Posts</SingleLink>
+                <IconWrapper>
+                    <HiOutlineArrowNarrowRight/>
+                </IconWrapper>
+            </LinkContainer>
         </BlogContainer>
     )
 }

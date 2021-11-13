@@ -1,12 +1,23 @@
 import React from 'react'
+import {
+    CommentContainer,
+    CommentName,
+    CommentText,
+    CommentHeading,
+    CommentWrapper,
+    CommentDate,
+} from './CommentElements'
 
 const Comment = (props) => {
-    console.log(props.comment)
     return (
-        <div>
-            {props.comment.name}
-            {props.index}
-        </div>
+        <CommentContainer>
+            <CommentHeading>Comment # {props.index + 1}</CommentHeading>
+            <CommentWrapper>
+                <CommentName>User: {props.comment.name}</CommentName>
+                <CommentDate>{props.comment.date_formatted}</CommentDate>
+            </CommentWrapper>
+            <CommentText>{props.comment.text}</CommentText>
+        </CommentContainer>
     )
 }
 
