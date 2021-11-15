@@ -17,40 +17,6 @@ import {
 import {HiOutlineArrowNarrowLeft, HiOutlineArrowNarrowRight} from 'react-icons/hi'
 
 const BlogPost = (props) => {
-
-    const [post, setPost] = useState({})
-    const [comments, setComments] = useState([])
-    const [errors, setErrors] = useState([])
-    const [Loading, setLoading] = useState(true);
-
-    const params = useParams();
-
-    //Initial Api call to get post and comments
-    useEffect(()=>{
-        let postPromise = fetch(`https://dcblogapi.herokuapp.com/api/post/${params.id}`,{})
-        let commentPromise = fetch(`https://dcblogapi.herokuapp.com/api/post/${params.id}/comment`,{})
-
-        Promise.all([postPromise, commentPromise])
-        .then(([post,comments])=>{
-            return Promise.all([post.json(), comments.json()])
-        })
-        .then(response=>{
-            setLoading(false);
-            console.log(response);
-
-            if(response[0].errors){
-                setErrors(response[0].errors)
-            }
-            else{
-                setPost(response[0])
-                setComments(response[1]) 
-            }
-        })
-        .catch(err=>{
-            console.log(err)
-        })
-    },[])
-
     return (
         <BlogContainer>
             <LinkContainer to='/'> 
@@ -61,13 +27,13 @@ const BlogPost = (props) => {
             </LinkContainer>
             <BlogContentWrapper>
                 <BlogContent>
-                    <BlogTitle>{post.title}</BlogTitle>       
+                    <BlogTitle>{props.post.title}</BlogTitle>       
                     <BlogAuthor>By: D. Chau</BlogAuthor>
-                    <BlogDate>Created: {post.date_formatted}</BlogDate>
+                    <BlogDate>Created: {props.post.date_formatted}</BlogDate>
                     
                 </BlogContent>
-                <BlogText>{post.text}</BlogText>
-                <CommentSection comments={comments}/>
+                <BlogText>{props.post.text}</BlogText>
+                <CommentSection comments={props.comments}/>
             </BlogContentWrapper>
             <LinkContainer to='/post/page/1'> 
                 <SingleLink>All Posts</SingleLink>

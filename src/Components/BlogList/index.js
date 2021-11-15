@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React from 'react'
 import SingleBlog from '../SingleBlog';
 import {
     ListContainer,
@@ -6,30 +6,12 @@ import {
     BlogSVG,
     ListWrapper,
     ListHeader,
-    ViewAll
+    ViewAll,
+    BottomRow,
+    Line,
 } from './BlogListElements'
 
-const BlogList = () => {
-    const [posts,setPosts] = useState([])
-    const [Loading, setLoading] = useState(false);
-
-    useEffect(()=>{
-        setLoading(true);
-        
-        fetch('https://dcblogapi.herokuapp.com/api/post',{})
-            .then(response=>{
-                return response.json();
-            })
-            .then(data=>{
-                // console.log(data)
-                setPosts(data);
-                setLoading(false);
-            })
-            .catch(err=>{
-                throw new Error('Failed to fetch api')
-            })
-
-    },[])
+const BlogList = (props) => {
 
     return (
         <ListContainer>
@@ -46,7 +28,7 @@ const BlogList = () => {
                 <ListHeader>
                     RECENT POSTS
                 </ListHeader>
-                {posts.map((post,index)=>{
+                {props.posts.map((post,index)=>{
                     if(index>4){
                         return
                     }
@@ -57,7 +39,10 @@ const BlogList = () => {
                     }
 
                 })}
-                <ViewAll to='/post/page/1'>Test post</ViewAll>
+                <BottomRow>
+                    <Line></Line>
+                    <ViewAll to='/post/page/1'>View All Posts</ViewAll>
+                </BottomRow>
             </ListWrapper>
         </ListContainer>
     )

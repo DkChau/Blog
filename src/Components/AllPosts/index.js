@@ -10,10 +10,11 @@ import {
 
 } from './AllPostsElements'
 import SideBar from '../Sidebar';
+import Loading from '../Loading';
 
 const AllPosts = () => {
     const [posts,setPosts] = useState([])
-    const [Loading, setLoading] = useState(false);
+    const [loading, setLoading] = useState(false);
     const [numPage, setNumPage] = useState([])
     
     const params = useParams();
@@ -42,6 +43,11 @@ const AllPosts = () => {
 
     },[])
 
+    if(loading){
+        return (
+            <Loading/>
+        )
+    }
     return (
         <PostContainer>
             <SideBar posts={posts}/>

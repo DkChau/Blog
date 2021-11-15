@@ -19,6 +19,7 @@ import {CgArrowLongDown} from 'react-icons/cg'
 import { BsGithub } from 'react-icons/bs'
 
 const HomePage = () => {
+
     return (
         <HomeContainer>
             <HomeBackground viewBox='0 0 100 100' preserveAspectRatio="none meet">
