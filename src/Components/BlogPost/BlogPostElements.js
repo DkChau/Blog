@@ -39,7 +39,7 @@ export const BlogText = styled.div`
     white-space:pre-line;
     font-size:1.3rem;
     font-family:'open sans';
-    padding:40px 0;
+    padding:20px 10px;
     border-top:2px solid black;
     border-bottom:2px solid black;
     border-width: 60;
@@ -48,25 +48,6 @@ export const BlogText = styled.div`
     width:80%;
     position:relative;
     z-index:1;
-
-    /* &:before{
-        content : "";
-        position: absolute;
-        left    : 5%;
-        bottom  : 0;
-        height  : 1px;
-        width   : 90%;
-        border-bottom:2px solid black;
-    }
-    &:after{
-        content : "";
-        position: absolute;
-        left    : 5%;
-        top  : 0;
-        height  : 1px;
-        width   : 90%;
-        border-bottom:2px solid black;
-    } */
 
 `
 export const BlogDate = styled.div`
@@ -77,16 +58,17 @@ export const LinkContainer = styled(Link)`
     width:20%;
     text-align:center;
     text-decoration:none;
-    color:white;
+    color:black;
     margin-top:100px;
     font-family:'pt mono';
     display:flex;
     height:100px;
     justify-content: center;
     align-items: center;
+    transition:color 0.3s ease-in-out;
 
     &:hover{
-        color:red;
+        color:white;
     }
 `
 export const IconWrapper = styled.span`
@@ -97,4 +79,6 @@ export const SingleLink = styled.span`
     font-size:1.8rem;
     display:flex;
     padding: 0 10px;
+
+
 ` 

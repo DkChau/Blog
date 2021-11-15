@@ -1,16 +1,10 @@
 import React, {useState, useEffect} from 'react'
+import SingleBlog from '../SingleBlog';
 import {
     ListContainer,
     BlogRect,
     BlogSVG,
-    ListItem,
     ListWrapper,
-    ListTitle,
-    ListDate,
-    ListText,
-    ListTextWrapper,
-    ListAuthor,
-    ListInfoWrapper,
     ListHeader,
     ViewAll
 } from './BlogListElements'
@@ -58,21 +52,12 @@ const BlogList = () => {
                     }
                     else{
                         return(
-                            <ListItem to={`/post/${post._id}`}>
-                                <ListTextWrapper>
-                                    <ListTitle>{post.title}</ListTitle>
-                                    <ListText>{post.text}</ListText>
-                                </ListTextWrapper>
-                                <ListInfoWrapper>
-                                    <ListDate>Posted: {post.date_formatted}</ListDate>
-                                    <ListAuthor>By: D. Chau</ListAuthor>
-                                </ListInfoWrapper>
-                            </ListItem>
+                            <SingleBlog post={post}/>
                         )
                     }
 
                 })}
-                <ViewAll to='/post'>Test post</ViewAll>
+                <ViewAll to='/post/page/1'>Test post</ViewAll>
             </ListWrapper>
         </ListContainer>
     )

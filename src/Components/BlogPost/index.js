@@ -69,7 +69,7 @@ const BlogPost = (props) => {
                 <BlogText>{post.text}</BlogText>
                 <CommentSection comments={comments}/>
             </BlogContentWrapper>
-            <LinkContainer to='/post'> 
+            <LinkContainer to='/post/page/1'> 
                 <SingleLink>All Posts</SingleLink>
                 <IconWrapper>
                     <HiOutlineArrowNarrowRight/>
