@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom';
 
 export const BarContainer = styled.div`
     height:100vh;
-    width:300px;
+    width:18.75rem;
     border:1px solid black; //probably box shadow
     grid-area:sidebar;
     background:#8ea99b;
@@ -22,7 +22,7 @@ export const HomeLink = styled(Link)`
     font-size:2rem;
     text-decoration:none;
     color:black;
-    padding:20px 20px;
+    padding:1.25rem 1.25rem;
     transition:all 0.3s ease-in-out;
 
     &:hover{
@@ -33,7 +33,7 @@ export const HomeLink = styled(Link)`
 export const PostLink = styled(Link)`
     text-decoration:none;
     color:black;
-    padding:5px 20px;
+    padding:.313rem 1.25rem;
     font-size:1.1rem;
     font-weight:300;
     border-bottom:1px solid black;

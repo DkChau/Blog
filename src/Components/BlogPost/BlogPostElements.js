@@ -15,11 +15,11 @@ export const BlogContentWrapper = styled.div`
     min-height:100vh;
     color:black;
     /* color:white; */
-    min-width:800px;
+    min-width:50rem;
     background:#8ea99b;
     /* background:#697d73; */
     border:1px solid black;
-    padding:80px 20px 0 20px;
+    padding:5rem 1.25rem 0 1.25rem;
     
 `
 export const BlogContent = styled.div`
@@ -27,8 +27,14 @@ export const BlogContent = styled.div`
     margin:0 auto;
     margin-bottom: 40px;
 `
+export const ContentRow = styled.div`
+    display:grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    width:100%;
+`
 export const BlogTitle = styled.div`
-    font-size:2rem;
+    font-size:2.8rem;
     font-weight:700;
 `
 export const BlogAuthor = styled.div`
@@ -39,10 +45,8 @@ export const BlogText = styled.div`
     white-space:pre-line;
     font-size:1.3rem;
     font-family:'open sans';
-    padding:20px 10px;
-    border-top:2px solid black;
+    padding:1.25rem 0 3.125rem 0;
     border-bottom:2px solid black;
-    border-width: 60;
     font-weight:400;
     margin: 0 auto;
     width:80%;
@@ -53,16 +57,17 @@ export const BlogText = styled.div`
 export const BlogDate = styled.div`
     font-size:1.1rem;
     font-weight:300;
+    justify-self:end;
 `
 export const LinkContainer = styled(Link)`
     width:20%;
     text-align:center;
     text-decoration:none;
     color:black;
-    margin-top:100px;
+    margin-top:6.25rem;
     font-family:'pt mono';
     display:flex;
-    height:100px;
+    height:6.25rem;
     justify-content: center;
     align-items: center;
     transition:color 0.3s ease-in-out;
@@ -78,7 +83,7 @@ export const IconWrapper = styled.span`
 export const SingleLink = styled.span`
     font-size:1.8rem;
     display:flex;
-    padding: 0 10px;
+    padding: 0 .625rem;
 
 
 ` 

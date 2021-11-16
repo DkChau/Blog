@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const CommentContainer = styled.div`
     height:auto;
-    padding:20px 0;
+    padding:1.25rem 0;
     display:flex;
     width:100%;
     flex-direction: column;
@@ -19,7 +19,7 @@ export const CommentWrapper = styled.div`
     grid-template-rows: auto;
     justify-content: center;
     align-content:center;
-    margin:20px 0;
+    margin:1.25rem 0;
     width:100%;
     font-family:'Open Sans';
 `

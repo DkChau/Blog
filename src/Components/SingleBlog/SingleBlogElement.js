@@ -3,12 +3,11 @@ import {Link} from 'react-router-dom';
 
 export const ListItem = styled(Link)`
     display:grid;
-    margin:15px 0;
+    margin:.938rem 0;
     grid-template-columns: 66.7% 33.3%;
-    grid-template-rows: 200px;
+    grid-template-rows: 12.5rem;
     width:100%;
     text-decoration:none;
-    /* box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 3px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset; */
     border:2px solid black;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 
@@ -36,7 +35,9 @@ export const ListText = styled.span`
     -webkit-box-orient: vertical;  
     overflow: hidden;
     white-space:pre-line;
-    padding: 9px 20px 0;
+    padding-left:1.25rem;
+    padding-right:1.25rem;
+    padding-top:10px;
     font-family:'Open Sans';
 
 `
@@ -45,7 +46,7 @@ export const ListTitle = styled.span`
     color:black;
     width:100%;
     text-align:center;
-    padding:5px 0;
+    padding:.313rem 0;
     font-weight:400;
     border-bottom:2px solid black;
 `
@@ -61,7 +62,7 @@ export const ListInfoWrapper = styled.span`
     border-left:2px solid black;
 `
 export const ListDate = styled.span`
-    margin:20px 0;
+    margin:1.25rem 0;
 `
 export const ListAuthor = styled.span`
 

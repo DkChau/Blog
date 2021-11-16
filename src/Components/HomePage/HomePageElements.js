@@ -38,7 +38,7 @@ export const LeftSide = styled.div`
 export const Text = styled.span`
     font-family:'PT Mono';
     font-size:2.8rem;
-    max-width:700px;
+    max-width:43.75rem;
     text-align:center;
     
 `
@@ -79,8 +79,7 @@ export const ArrowText = styled.span`
 export const LinkContainer = styled.div`
     margin-top: 40px;
     width:80%;
-    height:50px;
-    /* border:1px solid black; */
+    height:3.125rem;
     display:flex;
     align-items: center;
 `
@@ -89,7 +88,7 @@ export const LinkWrapper = styled.div`
     width:40%;
     margin:0 auto;
     grid-template-columns: auto 1fr 1fr 1fr;
-    grid-gap: 10px;
+    grid-gap: .625rem;
 `
 export const Logo = styled.div`
     font-size:1.5rem;
@@ -100,7 +99,7 @@ export const GHLink = styled.a`
     justify-content: center;
     align-items:center;
     font-size:1.2rem;
-    padding:0 10px;
+    padding:0 .625rem;
     transition:all 0.2s ease-in-out;
     text-decoration:none;
     color:black;

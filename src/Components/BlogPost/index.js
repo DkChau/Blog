@@ -12,6 +12,7 @@ import {
     SingleLink,
     LinkContainer,
     IconWrapper,
+    ContentRow,
 
 } from './BlogPostElements';
 import {HiOutlineArrowNarrowLeft, HiOutlineArrowNarrowRight} from 'react-icons/hi'
@@ -27,10 +28,11 @@ const BlogPost = (props) => {
             </LinkContainer>
             <BlogContentWrapper>
                 <BlogContent>
-                    <BlogTitle>{props.post.title}</BlogTitle>       
-                    <BlogAuthor>By: D. Chau</BlogAuthor>
-                    <BlogDate>Created: {props.post.date_formatted}</BlogDate>
-                    
+                    <BlogTitle>{props.post.title}</BlogTitle> 
+                    <ContentRow>
+                        <BlogAuthor>By: D. Chau</BlogAuthor>
+                        <BlogDate>{props.post.date_formatted}</BlogDate>
+                    </ContentRow>      
                 </BlogContent>
                 <BlogText>{props.post.text}</BlogText>
                 <CommentSection comments={props.comments}/>
