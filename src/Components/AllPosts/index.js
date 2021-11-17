@@ -11,6 +11,7 @@ import {
 } from './AllPostsElements'
 import SideBar from '../Sidebar';
 import Loading from '../Loading';
+import {Navigate} from 'react-router';
 
 const AllPosts = () => {
     const [posts,setPosts] = useState([])
@@ -43,6 +44,10 @@ const AllPosts = () => {
 
     },[])
 
+
+    if(isNaN(params.num) || parseInt(params.num) < 1){
+       return  <Navigate to='/404' />
+    }
     if(loading){
         return (
             <Loading/>
@@ -79,7 +84,6 @@ const AllPosts = () => {
             <PageLinkWrapper>
                 <LinkHeader>Page: </LinkHeader>
                 {numPage.map((page,index)=>{
-                    console.log(params.num, index)
                     return  <PageLink 
                                 to={`/post/page/${page+1}`}
                                 className={(index+1)==params.num ? 'active' : ''}>

@@ -3,6 +3,7 @@ import BlogPost from '../Components/BlogPost'
 import {useParams} from 'react-router-dom';
 import { PageContainer } from './PageElements'
 import Loading from '../Components/Loading';
+import {Navigate} from 'react-router';
 
 const BlogPage = (props) => {
 
@@ -38,9 +39,13 @@ const BlogPage = (props) => {
         .catch(err=>{
             console.log(err)
         })
-    },[])
+    },[params])
 
 
+    if(errors.length>0){
+        console.log(errors)
+        return <Navigate to='/404'/>
+    }
     if(loading){
         return (
             <Loading/>
