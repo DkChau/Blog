@@ -14,10 +14,8 @@ export const BlogContentWrapper = styled.div`
     height:100%;
     min-height:100vh;
     color:black;
-    /* color:white; */
     min-width:50rem;
     background:#8ea99b;
-    /* background:#697d73; */
     border:1px solid black;
     padding:5rem 1.25rem 0 1.25rem;
     
@@ -25,7 +23,6 @@ export const BlogContentWrapper = styled.div`
 export const BlogContent = styled.div`
     width:80%;
     margin:0 auto;
-    margin-bottom: 40px;
 `
 export const ContentRow = styled.div`
     display:grid;
@@ -45,7 +42,7 @@ export const BlogText = styled.div`
     white-space:pre-line;
     font-size:1.3rem;
     font-family:'open sans';
-    padding:1.25rem 0 3.125rem 0;
+    padding:3.125rem 0 3.125rem 0;
     border-bottom:2px solid black;
     font-weight:400;
     margin: 0 auto;

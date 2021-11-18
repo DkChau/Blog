@@ -30,11 +30,11 @@ const BlogList = (props) => {
                 </ListHeader>
                 {props.posts.map((post,index)=>{
                     if(index>4){
-                        return
+                        return null;
                     }
                     else{
                         return(
-                            <SingleBlog post={post}/>
+                            <SingleBlog key={`post${index}`} post={post}/>
                         )
                     }
 

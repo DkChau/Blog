@@ -60,7 +60,7 @@ const CommentSection = (props) => {
             <CommentContainer>
                 {props.comments.map((comment,index)=>{
                     return (
-                        <Comment index={index} comment={comment}/>
+                        <Comment key={`comment${index}`} index={index} comment={comment}/>
                     )
                 })}
             </CommentContainer>

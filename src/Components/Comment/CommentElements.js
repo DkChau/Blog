@@ -10,8 +10,11 @@ export const CommentContainer = styled.div`
 `
 export const CommentHeading = styled.div`
     width:100%;
-    font-size:2rem;
-    border-bottom:2px solid black;
+    font-size:1.7rem;
+    display:flex;
+    flex-direction:column;
+    padding:.625rem 0;
+    font-family:'pt mono';
 `
 export const CommentWrapper = styled.div`
     display:grid;
@@ -19,19 +22,19 @@ export const CommentWrapper = styled.div`
     grid-template-rows: auto;
     justify-content: center;
     align-content:center;
-    margin:1.25rem 0;
+    padding:.875rem .875rem;
     width:100%;
-    font-family:'Open Sans';
+    border:1px solid black;
+    border-bottom:none;
+    font-size:1.4rem;
 `
 export const CommentDate = styled.div`
     align-self:end;
     justify-self:end;
-    font-weight:600;
+    font-size:1.2rem;
 `
 export const CommentName = styled.div`
     align-self:end;
-    font-size:1.4rem;
-    font-weight:600;
     color:black;
 `
 export const CommentText = styled.div`
@@ -39,6 +42,7 @@ export const CommentText = styled.div`
     font-family:'Open Sans';
     font-size:1.1rem;
     font-weight:300;
-    /* background:white;
-    color:black; */
+    border:1px solid black;
+    width:100%;
+    padding:.875rem .875rem;
 `

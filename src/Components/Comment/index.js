@@ -11,9 +11,9 @@ import {
 const Comment = (props) => {
     return (
         <CommentContainer>
-            <CommentHeading>Comment # {props.index + 1}</CommentHeading>
+            <CommentHeading>Comment #{props.index + 1}</CommentHeading>
             <CommentWrapper>
-                <CommentName>User: {props.comment.name}</CommentName>
+                <CommentName>{props.comment.name}</CommentName>
                 <CommentDate>{props.comment.date_formatted}</CommentDate>
             </CommentWrapper>
             <CommentText>{props.comment.text}</CommentText>

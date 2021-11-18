@@ -64,7 +64,7 @@ const AllPosts = () => {
 
                         if(index>=start){
                             return (
-                                <SingleBlog post={post}/>
+                                <SingleBlog key={`post${index}`} post={post}/>
                             )
                         }
                     }
@@ -72,12 +72,11 @@ const AllPosts = () => {
                         let end = 5 * params.num;
                         let start = end - 5;
 
-                        if(index>=start && index <end){
+                        if(index>=start && index < end){
                             return (
-                                <SingleBlog post={post}/>
+                                <SingleBlog key={`post${index}`} post={post}/>
                             )
                         }
-
                     }
                 })} 
             </PostWrapper>
@@ -85,8 +84,9 @@ const AllPosts = () => {
                 <LinkHeader>Page: </LinkHeader>
                 {numPage.map((page,index)=>{
                     return  <PageLink 
+                                key={`link${index}`}
                                 to={`/post/page/${page+1}`}
-                                className={(index+1)==params.num ? 'active' : ''}>
+                                className={(index+1)===parseInt(params.num) ? 'active' : ''}>
                                 {page+1}
                             </PageLink>
                 })}

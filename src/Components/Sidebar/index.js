@@ -11,9 +11,9 @@ const SideBar = (props) => {
         <BarContainer>
             <PostLinks>
                 <HomeLink to='/'>Home</HomeLink>
-                {props.posts.map(post=>{
+                {props.posts.map((post,index)=>{
                     return(
-                        <PostLink to={`/post/${post._id}`}>{post.title}</PostLink>
+                        <PostLink key={`sidePost${index}`} to={`/post/${post._id}`}>{post.title}</PostLink>
                     )
                 })}
             </PostLinks>
