@@ -1,1 +1,1 @@
-novaark.github.io/blog
+novaark.github.io/Blog
