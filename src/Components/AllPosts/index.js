@@ -6,7 +6,8 @@ import {
     PostWrapper,
     PageLink,
     PageLinkWrapper,
-    LinkHeader
+    LinkHeader,
+    PostHeading
 
 } from './AllPostsElements'
 import SideBar from '../Sidebar';
@@ -57,6 +58,7 @@ const AllPosts = () => {
         <PostContainer>
             <SideBar posts={posts}/>
             <PostWrapper>
+                <PostHeading>All Posts</PostHeading>
                 {posts.map((post,index)=>{
                     if(params.num * 5 > posts.length){
                         let howMany = posts.length % 5;

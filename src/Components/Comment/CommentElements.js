@@ -7,6 +7,7 @@ export const CommentContainer = styled.div`
     width:100%;
     flex-direction: column;
     align-items: flex-start;
+    
 `
 export const CommentHeading = styled.div`
     width:100%;
@@ -24,9 +25,14 @@ export const CommentWrapper = styled.div`
     align-content:center;
     padding:.875rem .875rem;
     width:100%;
-    border:1px solid black;
-    border-bottom:none;
     font-size:1.4rem;
+    border-bottom:1px solid black;
+    
+`
+export const CommentContent = styled.div`
+    /* background:pink; */
+    width:100%;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
 `
 export const CommentDate = styled.div`
     align-self:end;
@@ -42,7 +48,6 @@ export const CommentText = styled.div`
     font-family:'Open Sans';
     font-size:1.1rem;
     font-weight:300;
-    border:1px solid black;
     width:100%;
     padding:.875rem .875rem;
 `

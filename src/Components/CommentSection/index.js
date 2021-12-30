@@ -45,10 +45,10 @@ const CommentSection = (props) => {
     }
 
     return (
-        <BlogContainer className='viewBlogFormContainer'>
+        <BlogContainer>
 
-            <BlogForm className='createComment'>
-                <BlogTitle className='commentTag'>Create Comment</BlogTitle>
+            <BlogForm>
+                <BlogTitle>Create Comment</BlogTitle>
                 <BlogLabel htmlFor='name'>Name</BlogLabel>
                 <BlogInput ref={nameRef} id='name' name='name'></BlogInput>
 

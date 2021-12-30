@@ -22,11 +22,10 @@ export const BlogForm = styled.form`
     max-width:35rem;
     max-height:20rem;
     align-items: center;
-    background:#8ea99b;
+    /* background:#8ea99b; */
     margin:5rem 0 2.5rem 0;
     padding-bottom:1.25rem;
-    box-shadow: rgba(60, 64, 67, 0.55) 0px 1px 2px 0px, rgba(60, 64, 67, 0.55) 0px 1px 3px 1px;
-`
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;`
 export const BlogLabel = styled.label`
     width:90%;
     font-size:1.5rem;

@@ -58,10 +58,9 @@ export const ViewAll = styled(Link)`
     color:black;
     border-radius:.313rem;
     padding:.125rem .313rem;
+    transition:all 0.15s ease;
 
     &:hover{
-        color:white;
-        background:black;
-        border:.125rem solid white;
+        transform:scale(1.04);
     }
 `

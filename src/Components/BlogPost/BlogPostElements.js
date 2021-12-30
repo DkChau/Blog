@@ -7,6 +7,7 @@ export const BlogContainer = styled.div`
     height:100%;
     background:#697d73;
     display:flex;
+    overflow-x:hidden;
 `
 export const BlogContentWrapper = styled.div`
     width:60%;
@@ -16,7 +17,8 @@ export const BlogContentWrapper = styled.div`
     color:black;
     min-width:50rem;
     background:#8ea99b;
-    border:1px solid black;
+    /* border:1px solid black; */
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
     padding:5rem 1.25rem 0 1.25rem;
     
 `
@@ -67,10 +69,11 @@ export const LinkContainer = styled(Link)`
     height:6.25rem;
     justify-content: center;
     align-items: center;
-    transition:color 0.3s ease-in-out;
+    transition:all 0.15s ease;
 
     &:hover{
         color:white;
+        transform:scale(1.1);
     }
 `
 export const IconWrapper = styled.span`

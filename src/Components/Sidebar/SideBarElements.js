@@ -18,33 +18,41 @@ export const PostLinks = styled.div`
     margin:0 auto;
     height:100%;
 `
+export const PostText = styled.span`
+    display:flex;
+    transition: all 0.15s ease;
+    width:50%;
+`
 export const HomeLink = styled(Link)`
     font-size:2rem;
     text-decoration:none;
     color:black;
     padding:1.25rem 1.25rem;
-    transition:all 0.3s ease-in-out;
+    transition:all 0.15s ease-in-out;
 
     &:hover{
-        background:black;
+        ${PostText}{
+            transform:translateX(4rem);
+        }
         color:white;
     }
 `
 export const PostLink = styled(Link)`
     text-decoration:none;
     color:black;
-    padding:.313rem 1.25rem;
+    padding:.75rem 1.25rem;
     font-size:1.1rem;
     font-weight:300;
-    border-bottom:1px solid black;
-    transition:all 0.3s ease-in-out;
-
+    border-bottom:2px solid black;
+    display:flex;
 
     &:nth-child(2){
-        border-top:1px solid black;
+        border-top:2px solid black;
     }
     &:hover{
-        background:black;
         color:white;
+        ${PostText}{
+            transform:translateX(4rem);
+        }
     }
 `

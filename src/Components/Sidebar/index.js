@@ -3,17 +3,18 @@ import {
     BarContainer,
     HomeLink,
     PostLink,
-    PostLinks
+    PostLinks,
+    PostText
 } from './SideBarElements'
 
 const SideBar = (props) => {
     return (
         <BarContainer>
             <PostLinks>
-                <HomeLink to='/'>Home</HomeLink>
+                <HomeLink to='/'><PostText>Home</PostText></HomeLink>
                 {props.posts.map((post,index)=>{
                     return(
-                        <PostLink key={`sidePost${index}`} to={`/post/${post._id}`}>{post.title}</PostLink>
+                        <PostLink key={`sidePost${index}`} to={`/post/${post._id}`}><PostText>{post.title}</PostText></PostLink>
                     )
                 })}
             </PostLinks>

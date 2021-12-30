@@ -6,17 +6,20 @@ import {
     CommentHeading,
     CommentWrapper,
     CommentDate,
+    CommentContent
 } from './CommentElements'
 
 const Comment = (props) => {
     return (
         <CommentContainer>
             <CommentHeading>Comment #{props.index + 1}</CommentHeading>
-            <CommentWrapper>
-                <CommentName>{props.comment.name}</CommentName>
-                <CommentDate>{props.comment.date_formatted}</CommentDate>
-            </CommentWrapper>
-            <CommentText>{props.comment.text}</CommentText>
+            <CommentContent>
+                <CommentWrapper>
+                    <CommentName>{props.comment.name}</CommentName>
+                    <CommentDate>{props.comment.date_formatted}</CommentDate>
+                </CommentWrapper>
+                <CommentText>{props.comment.text}</CommentText>
+            </CommentContent>
         </CommentContainer>
     )
 }
