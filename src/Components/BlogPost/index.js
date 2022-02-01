@@ -18,6 +18,7 @@ import {HiOutlineArrowNarrowLeft, HiOutlineArrowNarrowRight} from 'react-icons/h
 
 const BlogPost = (props) => {
     return (
+        
         <BlogContainer>
             <LinkContainer to='/'> 
                 <IconWrapper>
